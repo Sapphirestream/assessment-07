@@ -1,0 +1,23 @@
+
+Tiny 
+insert: 15.8 μs
+append: 48 μs
+
+Small 
+insert:  44.4 μs
+append:  54.9 μs
+
+Medium: 
+insert:  142.8 μs
+append:  78.7 μs
+
+Large: 
+insert:  4.3759 ms
+append:  313.3 μs
+
+Extra Large
+Insert: 444.5709ms
+Append:  1.7658 ms
+
+Append scales much better. In small amounts this does not really matter, but in large scale arrays the time increases exponentially. Unshift takes longer than Push because the entire array has to be shifted when a number is put at the beginning, versus push which just adds it to the end. 
+
